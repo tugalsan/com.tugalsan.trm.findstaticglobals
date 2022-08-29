@@ -10,7 +10,7 @@ import java.util.stream.*;
 //WHEN RUNNING IN NETBEANS, ALL DEPENDENCIES SHOULD HAVE TARGET FOLDER!
 public class Main {
 
-    final private static TS_Log d = TS_Log.of(Main.class.getSimpleName());
+    final private static TS_Log d = TS_Log.of(Main.class);
 
     /*
     it finds static variable usage
