@@ -39,7 +39,7 @@ public class Main {
                         var ref = javaFile.toString();
                         var idxRef = ref.indexOf(pattern);
                         ref = ref.substring(idxRef + pattern.length());
-                        var debugLine = TGS_StringUtils.concat(ref, ", ", String.valueOf(idx), ", ", lines.get(idx), "\n");
+                        var debugLine = TGS_StringUtils.cmn().concat(ref, ", ", String.valueOf(idx), ", ", lines.get(idx), "\n");
                         TS_FileTxtUtils.toFile(debugLine, results, true);
                     });
         });
