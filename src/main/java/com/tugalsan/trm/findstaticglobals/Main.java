@@ -12,14 +12,20 @@ public class Main {
 
     final private static TS_Log d = TS_Log.of(Main.class);
 
+    public static void main(String... s) {
+        var parentDirectory = Path.of("C:\\git");
+        var pattern = "src\\main\\java\\com\\tugalsan\\";
+
+        run(parentDirectory, pattern);
+    }
+
     /*
-    it finds static variable usage
-    
+    it finds static variable usage    
     example input params
-    var parentDirectory = Path.of("C:\\me\\codes\\com.tugalsan");
-    var pattern = "src\\main\\java\\com\\tugalsan\\";
+        var parentDirectory = Path.of("C:\\git");
+        var pattern = "src\\main\\java\\com\\tugalsan\\";
      */
-    public void run(Path parentDirectory, String pattern) {
+    public static void run(Path parentDirectory, String pattern) {
         if (!TS_DirectoryUtils.isExistDirectory(parentDirectory)) {
             d.ce("reportStaticGlobals", "skip", "dir not exists", parentDirectory);
             return;
